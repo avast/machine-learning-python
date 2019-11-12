@@ -7,6 +7,7 @@ You can browse notebooks in git see [Lesson 1 Notebook](./imlp_1_data.ipynb). If
 1. Install Python 3.7 Miniconda - [here](https://docs.conda.io/en/latest/miniconda.html)
 2. Using Miniconda default python environment install following packages `conda install scikit-learn seaborn pandas numpy graphviz scipy`
 3. Install additional packages `conda install -c conda-forge pydotplus xgboost lime shap jupyterlab`
+4. Install [TensorFlow](https://www.tensorflow.org/install) `pip install tensorflow`
 
 ## Viewing and Editing Notebooks
 
