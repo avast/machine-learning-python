@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-article
+root: intro
+sections:
+- file: imlp/imlp
+  sections:
+  - file: imlp/imlp_1_data
+  - file: imlp/imlp_2_modeling
+  - file: imlp/mlp_3_experiments
+  - file: imlp/imlp_4_deep_learning
+- file: timeseries_presentation/timeseries_presentation
+  sections:
+  - file: timeseries_presentation/TimeSeriesAnomalyDetection2

@@ -1,0 +1,3 @@
+venv/
+*.code-workspace
+book/_build

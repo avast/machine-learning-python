@@ -1,0 +1,16 @@
+pandas
+scikit-learn
+seaborn
+graphviz
+scipy
+jupyterlab
+ipykernel
+ipywidgets
+plotly
+jupyter-book
+ghp-import
+pydotplus
+xgboost
+lime
+shap
+tensorflow
