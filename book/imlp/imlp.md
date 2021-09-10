@@ -2,6 +2,8 @@
 
 This course [Introduction to Machine Learning with Python](https://www.cerge-ei.cz/economics-discovery-hub/2019-11-13/introduction-to-machine-learning-with-python) was lectured by [Avast](http://www.avast.com) as part of [Economics Discovery Hub](https://www.cerge-ei.cz/discovery/) at [CERGE-EI](https://www.cerge-ei.cz/).
 
+![Course Structure](./imlp1_images/aml_pres_2.png)
+
 This course covers:
 
 1. [Data](./imlp_1_data.ipynb)

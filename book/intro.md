@@ -15,3 +15,9 @@ There are many online courses explaining different pieces of ML. Very few of the
 jupyter-book clean book/
 jupyter-book build book/
 ```
+
+It is possible to setup [entr](http://eradman.com/entrproject/) to get the book rebuild with every new .md or .ipynb file saved with
+
+```bash
+find book -path book/_build -prune -false -o \( -name '*.ipynb' -o -name '*.md' \) | entr jupyter-book build book
+```
