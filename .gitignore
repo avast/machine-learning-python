@@ -114,3 +114,4 @@ poetry.lock
 __pycache__
 .eggs
 .tox
+.ipynb_checkpoints/
