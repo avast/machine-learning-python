@@ -1,0 +1,1508 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experimenation &#8212; Machine Learning in Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Deep Learning" href="imlp_4_deep_learning.html" />
+    <link rel="prev" title="Modeling and Evaluation" href="imlp_2_modeling.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Machine Learning in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning in Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="imlp_1_data.html">
+   Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="imlp_2_modeling.html">
+   Modeling and Evaluation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Experimenation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="imlp_4_deep_learning.html">
+   Deep Learning
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Setup
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../setup.html">
+   Setup
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/imlp/imlp_3_experiments.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/avast/machine-learning-python"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/avast/machine-learning-python/issues/new?title=Issue%20on%20page%20%2Fimlp/imlp_3_experiments.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/avast/machine-learning-python/master?urlpath=tree/book/imlp/imlp_3_experiments.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clinical-trials">
+   Clinical Trials
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#online-controlled-experiments">
+   Online Controlled Experiments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-a-b-tests">
+   Why A/B Tests?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correlation-and-causation">
+     Correlation and Causation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#novelty">
+     Novelty
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#learnings">
+     Learnings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hippo">
+     HiPPO
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#statistics-at-heart">
+   Statistics at Heart
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-variant-to-choose">
+     What Variant to Choose?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#null-hypothesis-significance-testing">
+   Null Hypothesis Significance Testing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sampling-distribution">
+     Sampling Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#p-value">
+     p-Value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#p-value-depends-on-how-we-perform-the-test">
+     p-Value Depends on How we Perform the Test
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quiz">
+     Quiz
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nhst-pros">
+     NHST Pros
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nhst-cons">
+     NHST Cons
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bayesian-analysis">
+   Bayesian Analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-do-we-update-our-belief-in-things">
+     How Do We Update Our Belief in Things?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#different-better-setting">
+     Different (Better) Setting?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bayesian-inference">
+     Bayesian Inference
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bayes-rule">
+     Bayes Rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impact-of-prior-to-posterior">
+     Impact of Prior to Posterior
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bayes-rule-for-conversions">
+     Bayes Rule for Conversions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#beta-distribution">
+     Beta Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#is-bayesian-analysis-more-informative">
+     Is Bayesian Analysis More Informative?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decision-rules">
+   Decision Rules
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decision-rules-and-false-positives">
+     Decision Rules and False Positives
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simulation-of-decision-making">
+     Simulation of Decision Making
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#null-hypothesis-is-true">
+       Null Hypothesis is True
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#null-hypothesis-is-false">
+       Null Hypothesis is False
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#probabilistic-results">
+   Probabilistic Results
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#improvement">
+     Improvement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probability-to-beat-baseline">
+     Probability to Beat Baseline
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probability-to-be-the-best">
+     Probability to Be the Best
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ab-test-dashboard">
+     AB Test Dashboard
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources">
+   Resources
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="experimenation">
+<h1>Experimenation<a class="headerlink" href="#experimenation" title="Permalink to this headline">¶</a></h1>
+<p>Having two comparable models, we want to answer simple question - <strong>is model A or B doing better?</strong> It turns out that answering this simple question is quite complex.</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># youtube</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;-kjRL-Q-KBc&#39;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">55</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="600"
+    height="400"
+    src="https://www.youtube.com/embed/-kjRL-Q-KBc?start=55"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="section" id="clinical-trials">
+<h2>Clinical Trials<a class="headerlink" href="#clinical-trials" title="Permalink to this headline">¶</a></h2>
+<img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/D597/production/_91097645_jameslind.jpg" />
+<p><a class="reference external" href="https://www.bbvaopenmind.com/en/science/leading-figures/james-lind-and-scurvy-the-first-clinical-trial-in-history">James Lind and Scurvy: The First Clinical Trial in History?</a></p>
+</div>
+<div class="section" id="online-controlled-experiments">
+<h2>Online Controlled Experiments<a class="headerlink" href="#online-controlled-experiments" title="Permalink to this headline">¶</a></h2>
+<p>Online controlled experiments, A/B tests or simply experiments, are widely used by data-driven companies to evaluate the impact of change and are the only data-driven approach to prove causality.</p>
+<img src="./imlp3_files/oce.png" width="600" />
+<p>Sample of real users, not WEIRD (Western, Educated, Industrialized, Rich, and Democratic).</p>
+<p>Experiment execution:</p>
+<ol class="simple">
+<li><p>Users are randomly assigned to one of the two variants: Control (A) or Treatment (B).</p></li>
+<li><p>Control is usually existing system while Treatment is the system with the new feature <span class="math notranslate nohighlight">\(X\)</span> to test.</p></li>
+<li><p>Users’ interactions with the system are recorded.</p></li>
+<li><p>We calculate metrics from recorded data.</p></li>
+</ol>
+<p>If the experiment has been designed and executed correctly, the only thing consistently different between the two variants is feature <span class="math notranslate nohighlight">\(X\)</span>. All external factors are eliminated by being evenly distributed among Control and Treatment. We can hypothesize that any difference in metrics between the two variants can be attributed to either feature <span class="math notranslate nohighlight">\(X\)</span> or to due to a change resulted from random assigment of users to variants. The later is ruled out (probalistically) using statistical tests. This establishes a causal relationship between the feature change <span class="math notranslate nohighlight">\(X\)</span> and changes in user behavior. In S. Gupta, R. Kohavi, et al. <a class="reference external" href="https://exp-platform.com/Documents/2019-FirstPracticalOnlineControlledExperimentsSummit_SIGKDDExplorations.pdf">Top Challenges from the first Practical Online Controlled
+Experiments Summit</a></p>
+<ol class="simple">
+<li><p><a class="reference external" href="#intuition">Statistics at Heart</a></p></li>
+<li><p><a class="reference external" href="#null">Null Hypothesis Significance Testing and Sampling Distributions</a></p></li>
+<li><p><a class="reference external" href="#bayes">Bayes Analysis</a></p></li>
+<li><p><a class="reference external" href="#decision">Decision Rules</a></p></li>
+<li><p><a class="reference external" href="#pbb">Probabilistic Results</a></p></li>
+<li><p><a class="reference external" href="#rules">Rules of Thumb</a></p></li>
+<li><p><a class="reference external" href="#not">Top Challenges</a></p></li>
+<li><p><a class="reference external" href="#resources">Resources</a></p></li>
+</ol>
+</div>
+<div class="section" id="why-a-b-tests">
+<h2>Why A/B Tests?<a class="headerlink" href="#why-a-b-tests" title="Permalink to this headline">¶</a></h2>
+<p>Because assessing the value of novel ideas is hard.</p>
+<div class="section" id="correlation-and-causation">
+<h3>Correlation and Causation<a class="headerlink" href="#correlation-and-causation" title="Permalink to this headline">¶</a></h3>
+<p>Bloodletting effect of having calming effects on patients let doctors practice it for 2000 years.
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/BloodlettingPhoto.jpg" width="300" />
+<a class="reference external" href="https://en.wikipedia.org/wiki/Bloodletting">Wikipedia</a></p>
+</div>
+<div class="section" id="novelty">
+<h3>Novelty<a class="headerlink" href="#novelty" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Semmelweis_reflex">Semmelweis Reflex</a>.</p></li>
+<li><p>It is hard to subject your idea to the metric and receive negative feedback.</p></li>
+</ol>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Ignaz_Semmelweis_1860.jpg/440px-Ignaz_Semmelweis_1860.jpg" width="300" /></div>
+<div class="section" id="learnings">
+<h3>Learnings<a class="headerlink" href="#learnings" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p><em>To have a great idea, have a lot of them.</em> (Thomas Edison)</p></li>
+<li><p><em>If you have to kiss a lot of frogs, to find a prince, find more frogs and kiss them faster and faster.</em> (Mike Moran, Do it Wrong Quickly)</p></li>
+</ol>
+<table><tr>
+    <td><a href="https://en.wikipedia.org/wiki/Thomas_Edison"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Thomas_Edison2.jpg/440px-Thomas_Edison2.jpg"/ width="300"></a></td>
+        <td><a href="https://www.amazon.com/Do-Wrong-Quickly-Changes-Marketing/dp/0132255960"><img src="https://images-na.ssl-images-amazon.com/images/I/51WczH0uCPL._SX375_BO1,204,203,200_.jpg" width="300"/></a></td>
+</tr></table></div>
+<div class="section" id="hippo">
+<h3>HiPPO<a class="headerlink" href="#hippo" title="Permalink to this headline">¶</a></h3>
+<p><img alt="hippo" src="../_images/hippo.jpg" /></p>
+<p><em>If we have data, let’s look at data. If all we have are opinions, let’s go with mine.</em> (Jim Barksdale - former CEO of Netscape)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import some basic libraries to do analysis and ML</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sklearn</span> <span class="k">as</span> <span class="nn">sk</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">pylab</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># Visualization details</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span><span class="mi">8</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id="intuition"></a></p>
+</div>
+</div>
+<div class="section" id="statistics-at-heart">
+<h2>Statistics at Heart<a class="headerlink" href="#statistics-at-heart" title="Permalink to this headline">¶</a></h2>
+<p>Experiments and their evaluation is a work with uncertainity that requires some mathematics so we can talk about it precisly :)</p>
+<p>Let’s use an experiment measuring click through rate CTR (defined as clicks/views) of some button on some website. Control variant A (current default) uses green color, threatment variant B (challenger) uses red button. We ran randomized experiment on users of our website with following results</p>
+<div class="section" id="what-variant-to-choose">
+<h3>What Variant to Choose?<a class="headerlink" href="#what-variant-to-choose" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variant</p></th>
+<th class="text-align:right head"><p>Views</p></th>
+<th class="text-align:right head"><p>Clicks</p></th>
+<th class="text-align:right head"><p>CTR</p></th>
+<th class="text-align:right head"><p>Relative Difference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A</p></td>
+<td class="text-align:right"><p>1,000</p></td>
+<td class="text-align:right"><p>100</p></td>
+<td class="text-align:right"><p>10%</p></td>
+<td class="text-align:right"><p>—</p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td class="text-align:right"><p>1,000</p></td>
+<td class="text-align:right"><p>110</p></td>
+<td class="text-align:right"><p>11%</p></td>
+<td class="text-align:right"><p>+10%</p></td>
+</tr>
+</tbody>
+</table>
+<p>Before we decided to run such test, we agreed on stopping it when both variants reach 1,000 views. We can’t run this experiment any longer because it takes too long to get that many views. Our question to answer is if variant B is better than variant A. This is all information we have and we have to determine if we trust that B is better than A.</p>
+<p>We work with a sample of 1,000 views per variant and want to reason about whole populations of views (users, …) in A and B. CTR of 10% (11%) are the most likely estimates of population CTR given the data we have. But the real situation is little bit more complicated. True population CTRs can be anywhere around our estimates.</p>
+<p>Probability distribution of true population CTRs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># estimations</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span> <span class="o">-</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="mi">110</span><span class="p">,</span> <span class="mi">1000</span> <span class="o">-</span> <span class="mi">110</span><span class="p">)</span>
+<span class="n">a_rvs</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">b_rvs</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">cs</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;husl&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">a_rvs</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="s1">&#39;silverman&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a_rvs</span><span class="p">),</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A Mean&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">b_rvs</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="s1">&#39;silverman&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">b_rvs</span><span class="p">),</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B Mean&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Estimation of CTR&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;CTR&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_17_0.png" src="../_images/imlp_3_experiments_17_0.png" />
+</div>
+</div>
+<p>It can easily happen that true CTR of variant B is below true CTR of variant A despite measuring otherwise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># where could true population means be?</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">cs</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;husl&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">a_rvs</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="s1">&#39;silverman&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a_rvs</span><span class="p">),</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A Mean&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">b_rvs</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="s1">&#39;silverman&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">b_rvs</span><span class="p">),</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B Mean&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Estimation of CTR&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;CTR&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mf">0.11</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.005</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.01</span><span class="p">,</span> <span class="n">overhang</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mf">0.09</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.005</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.01</span><span class="p">,</span> <span class="n">overhang</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_19_0.png" src="../_images/imlp_3_experiments_19_0.png" />
+</div>
+</div>
+<p>What to do, do having more data help in this case? Yes, having more data makes our estimate more accurate. So it is very unlikely that CTR of variant A to be close to 0.11.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># effect of more samples in the experiment</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span> <span class="o">-</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span> <span class="o">-</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">a_rvs</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">b_rvs</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">cs</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;husl&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">a_rvs</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="s1">&#39;silverman&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A with 100 clicks&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">a_rvs</span><span class="p">),</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A Mean&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">b_rvs</span><span class="p">,</span> <span class="n">bw</span><span class="o">=</span><span class="s1">&#39;silverman&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A with 1,000 clicks&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">b_rvs</span><span class="p">),</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B Mean&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Estimation of CTR&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;CTR&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mf">0.11</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">30</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.005</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.01</span><span class="p">,</span> <span class="n">overhang</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_21_0.png" src="../_images/imlp_3_experiments_21_0.png" />
+</div>
+</div>
+<p><a id="null"></a></p>
+</div>
+</div>
+<div class="section" id="null-hypothesis-significance-testing">
+<h2>Null Hypothesis Significance Testing<a class="headerlink" href="#null-hypothesis-significance-testing" title="Permalink to this headline">¶</a></h2>
+<p><em>Null hypothesis significance testing</em> is common approach to deal with this uncertainties.</p>
+<p><em>NHST</em> decides if a null hypothesis can be rejected given obtained data.</p>
+<p>Examples of null and alternative hypothesis:</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(H_0\)</span>: A coin is fair.</p>
+<ol class="simple">
+<li><p>Meaning we can expect equal number of heads and tails from <span class="math notranslate nohighlight">\(N\)</span> tosses of the coin.</p></li>
+<li><p><span class="math notranslate nohighlight">\(H_1\)</span>: A coin is biased towards heads or tails.</p></li>
+</ol>
+</li>
+<li><p><span class="math notranslate nohighlight">\(H_0\)</span>: CTRs of variants A and B are equal.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(H_1\)</span>: There’s difference between CTR in A and B.</p></li>
+</ol>
+</li>
+</ol>
+<div class="section" id="sampling-distribution">
+<h3>Sampling Distribution<a class="headerlink" href="#sampling-distribution" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sampling distributions</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">x2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">));</span>
+<span class="c1"># ax = axx[0]</span>
+<span class="c1"># ax.scatter(x1, y1, marker=&#39;o&#39;, alpha=.4);</span>
+<span class="c1"># ax.scatter([1.5], [0], marker=&#39;o&#39;, color=&#39;g&#39;, lw=10)</span>
+<span class="c1"># c = plt.Circle((0, 0), radius=1.5, color=&#39;g&#39;, fill=False, lw=3);</span>
+<span class="c1"># ax.add_artist(c);</span>
+<span class="c1"># ax.arrow(1.5, 0., 1.0, 0., width=.05, head_width=.2, overhang=0.1, color=&#39;k&#39;);</span>
+<span class="c1"># ax.arrow(2.5, 0., -0.7, 0., width=.05, head_width=.2, overhang=0.1, color=&#39;k&#39;, shape=&#39;full&#39;);</span>
+<span class="c1"># ax.arrow(1.5, 2., 0, -1.6, width=.05, head_width=.2, overhang=0.1, color=&#39;k&#39;, shape=&#39;full&#39;);</span>
+<span class="c1"># ax.text(2, .3, &#39;Extreme values&#39;, fontsize=18);</span>
+<span class="c1"># ax.text(1.5, 2, &#39;Actual Outcome&#39;, fontsize=18);</span>
+<span class="c1"># ax.set_xlim((-7, 7));</span>
+<span class="c1"># ax.set_ylim((-7, 7));</span>
+<span class="c1"># ax.set_title(&#39;Sampling Distribution for Null Hypothesis H&#39;);</span>
+<span class="c1"># ax.grid()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.4</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mf">2.5</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">radius</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.3</span><span class="p">,</span> <span class="n">overhang</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.6</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.3</span><span class="p">,</span> <span class="n">overhang</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.6</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.3</span><span class="p">,</span> <span class="n">overhang</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;full&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Actual Outcome&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.7</span><span class="p">,</span> <span class="mf">.3</span><span class="p">,</span> <span class="s1">&#39;Extreme values&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">((</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">));</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">));</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Sampling Distribution for Null Hypothesis H&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_26_0.png" src="../_images/imlp_3_experiments_26_0.png" />
+</div>
+</div>
+<p>Let’s assume our null hypothesis is valid. If we ran the same experiment many times, we get many point estimates <span class="math notranslate nohighlight">\(\hat{\mu}\)</span> of population metric mean <span class="math notranslate nohighlight">\(\mu\)</span> (eg. CTR). These estimates are normally distributed because of a Central limit theorem and because we assume the null hypothesis is true they are centered around population <span class="math notranslate nohighlight">\(\mu\)</span>. This distribution is called <em>sampling distribution</em> and it is <strong>only imaginative</strong>, we do not construct it from the data, it comes from the assumption about the null hypothesis.</p>
+<p>We usually run only 1 experiment giving us point estimate <span class="math notranslate nohighlight">\(\hat{\mu}\)</span> of population mean <span class="math notranslate nohighlight">\(\mu\)</span>. If <span class="math notranslate nohighlight">\(\hat{\mu}\)</span> lies out of where eg. 95% of samples from the imaginative sampling distribution would lay, we say that we collected evidence that shows tha under 95% significance level (<span class="math notranslate nohighlight">\(0.95 = 1-\alpha\)</span>), we can reject the null hypothesis as being valid.</p>
+<p>Note that this does not say much about a probability of the null hypothesis to be true or false. It can only reject the null hypothesis.</p>
+<p><img alt="nhst" src="https://newonlinecourses.science.psu.edu/stat414/sites/onlinecourses.science.psu.edu.stat414/files/lesson30/Lesson30_08/index.gif" /></p>
+<p><a class="reference external" href="https://newonlinecourses.science.psu.edu/stat414/node/196/">STAT 414 / 415, Probability Theory and Mathematical Statistics</a></p>
+</div>
+<div class="section" id="p-value">
+<h3>p-Value<a class="headerlink" href="#p-value" title="Permalink to this headline">¶</a></h3>
+<p><em>p-Value</em> is the probability of getting point estimates <span class="math notranslate nohighlight">\(\hat{\mu}_i\)</span> from running multiple experiments equally or more extreme than the one point estimate <span class="math notranslate nohighlight">\(\hat{\mu}\)</span> we’ve got from our real experiment under <em>sampling distribution</em> based on our null hypothesis. If p-value is below 5%, we reject the null hypothesis under 95% significance level.</p>
+<p>Note that p-value does not talk about probability of where we can expect <span class="math notranslate nohighlight">\(\mu\)</span>. It talks about probability of getting such or more extreme result.</p>
+<p>Let’s illustrate p-value under some null hypothesis and stopping criteria. Most of all imaginative experiment results falls around the mean of sampling distribution (from central limit theorem). Some fall beyond actual outcome. p-value is proportion of the cloud at actual outcome and beyond.</p>
+</div>
+<div class="section" id="p-value-depends-on-how-we-perform-the-test">
+<h3>p-Value Depends on How we Perform the Test<a class="headerlink" href="#p-value-depends-on-how-we-perform-the-test" title="Permalink to this headline">¶</a></h3>
+<p>Many of the following examples are taken from very well written book <strong>John Kruschke</strong> <a class="reference external" href="https://www.amazon.com/dp/0124058884">Doing Bayesian Data Analysis</a>.</p>
+<p>Test if a coin is a fair coin (<span class="math notranslate nohighlight">\(\theta = \frac{1}{2}\)</span>) or not given a sample consisting of <span class="math notranslate nohighlight">\(N\)</span> tosses with <span class="math notranslate nohighlight">\(z\)</span> heads.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># simulation</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+<span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mf">1000.</span><span class="p">)</span>
+
+<span class="n">proba_n</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span>
+<span class="n">left_tail_n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">zs</span><span class="p">[</span><span class="n">zs</span> <span class="o">&lt;=</span> <span class="mi">7</span><span class="p">]))</span>
+
+<span class="n">proba_z</span> <span class="o">=</span> <span class="n">z</span><span class="o">/</span><span class="n">ns</span> <span class="o">*</span> <span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">ns</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+<span class="n">left_tail_z</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">z</span> <span class="o">/</span> <span class="n">ns</span><span class="p">[</span><span class="n">ns</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">]</span> <span class="o">*</span> <span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">ns</span><span class="p">[</span><span class="n">ns</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">],</span> <span class="n">theta</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axx</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">6</span><span class="p">));</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;p-Value Depends on How we Perform the Test&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">zs</span><span class="o">/</span><span class="n">N</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">proba_n</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">));</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Proportion z/N&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;p(z/N)&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Sampling Distribution - Fixed N&#39;</span><span class="p">);</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">z</span><span class="o">/</span><span class="n">ns</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">proba_z</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">));</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Proportion z/N&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;p(z/N)&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Sampling Distribution - Fixed z&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_33_0.png" src="../_images/imlp_3_experiments_33_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># simulation</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axx</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">6</span><span class="p">));</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;p-Value Depends on How we Perform the Test&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">zs</span><span class="o">/</span><span class="n">N</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">proba_n</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">/</span><span class="n">N</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">.1</span><span class="p">,</span> <span class="mf">.14</span><span class="p">,</span> <span class="s1">&#39;N = </span><span class="si">%0.0f</span><span class="se">\n</span><span class="s1">z = </span><span class="si">%0.0f</span><span class="se">\n</span><span class="s1">p = </span><span class="si">%0.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">left_tail_n</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">));</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Proportion z/N&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;p(z/N)&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Sampling Distribution - Fixed N&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">/</span><span class="n">N</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="nb">float</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">/</span><span class="n">N</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.001</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.008</span><span class="p">,</span> <span class="n">overhang</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">z</span><span class="o">/</span><span class="n">ns</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">proba_z</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="nb">float</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">/</span><span class="n">N</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">.1</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="s1">&#39;N = </span><span class="si">%0.0f</span><span class="se">\n</span><span class="s1">z = </span><span class="si">%0.0f</span><span class="se">\n</span><span class="s1">p = </span><span class="si">%0.5f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">left_tail_z</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">));</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Proportion z/N&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;p(z/N)&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Sampling Distribution - Fixed z&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">/</span><span class="n">N</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="nb">float</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">/</span><span class="n">N</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">.001</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">.006</span><span class="p">,</span> <span class="n">overhang</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_34_0.png" src="../_images/imlp_3_experiments_34_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="quiz">
+<h3>Quiz<a class="headerlink" href="#quiz" title="Permalink to this headline">¶</a></h3>
+<p>You’ve run an A/B test. Your A/B testing software has given you a p-value of <span class="math notranslate nohighlight">\(0.03\)</span>. Which of the following is true? (Several or none of the statements may be correct.)</p>
+<ol class="simple">
+<li><p>You have disproved the null hypothesis (that is, there is no difference between the variations).</p></li>
+<li><p>The probability of the null hypothesis being true is 0.03.</p></li>
+<li><p>You have proved your experimental hypothesis (that the variation is better than the control).</p></li>
+<li><p>The probability of the variation being better than control is 97%.</p></li>
+</ol>
+<p><a class="reference external" href="https://www.chrisstucchio.com/pubs/slides/gilt_bayesian_ab_2015/slides.html#7">Chris Stucchio, Bayesian A/B Testing at VWO</a></p>
+<p>All above statements are wrong!</p>
+</div>
+<div class="section" id="nhst-pros">
+<h3>NHST Pros<a class="headerlink" href="#nhst-pros" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Simplicity.</p></li>
+<li><p>Binary thinking.</p></li>
+<li><p>Studied well, tools and knowledge available.</p></li>
+</ol>
+</div>
+<div class="section" id="nhst-cons">
+<h3>NHST Cons<a class="headerlink" href="#nhst-cons" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Sad faces of experimenters when p-value &gt;= 5% and we don’t know if <span class="math notranslate nohighlight">\(H_0\)</span> or <span class="math notranslate nohighlight">\(H_1\)</span> is valid (this happens 90% of times!).</p></li>
+<li><p>Needs statisticians to explain and overcome many misleading pitfalls when not running 100% correctly.</p></li>
+<li><p>Unintuitive reasoning based on sampling distributions.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="bayesian-analysis">
+<h2>Bayesian Analysis<a class="headerlink" href="#bayesian-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Bayesian analysis solves all our cons of NHST.</p>
+<div class="section" id="how-do-we-update-our-belief-in-things">
+<h3>How Do We Update Our Belief in Things?<a class="headerlink" href="#how-do-we-update-our-belief-in-things" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>We assume our own belief for an event to happen (eg. someone gets sick) from colloquial/anecdotal knowledge.</p></li>
+<li><p>When we have more evidence pointing toward (away from) the event, we increase (decrease) our beliefe for an event to happen.</p></li>
+</ol>
+<center><i>Probability that an event has happened given a set of evidence for it <br />is equal to the probability of the evidence being caused by the event multiplied by the probability of the event itself.</i></center><div class="math notranslate nohighlight">
+\[P(\text{patient has disease given positive test result)}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{&quot;is&quot;}\]</div>
+<div class="math notranslate nohighlight">
+\[P(\text{test result positive AND patient has disease})\]</div>
+<div class="math notranslate nohighlight">
+\[\text{&quot;is&quot;}\]</div>
+<div class="math notranslate nohighlight">
+\[P(\text{test result positive given patient has disease}) \times P(\text{disease})\]</div>
+<div class="math notranslate nohighlight">
+\[P(d\,|\,t)\ \text{&quot;is&quot;}\ P(t\,|\,d) \times P(d)\]</div>
+</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Patient has tested positive for disease <span class="math notranslate nohighlight">\(d\)</span>.</p></li>
+<li><p>The test used has hit rate (recall) of 99% - probability of testing positive <span class="math notranslate nohighlight">\(t\)</span> given patient has a disease.</p></li>
+<li><p>The test used has false alarm rate (fpr) of 5% - probability of testing positive <span class="math notranslate nohighlight">\(t\)</span> given patient does not have a disease.</p></li>
+<li><p>The disease is rare striking only 1 out of 1,000 people.</p></li>
+</ol>
+<p>What do you think is the probability of the patient having the disease when his test was positive?</p>
+</div>
+<div class="section" id="id1">
+<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Patient has tested positive for disease <span class="math notranslate nohighlight">\(d\)</span>.</p></li>
+<li><p>The test used has accuracy of 99% - probability of testing positive <span class="math notranslate nohighlight">\(t\)</span> given patient has disease <span class="math notranslate nohighlight">\(d\)</span></p></li>
+<li><p>The test used has false alarm rate of 5% - probability of testing positive <span class="math notranslate nohighlight">\(t\)</span> given patient does not have a disease.</p></li>
+<li><p>The disease is rare striking only 1 out of 1,000 people.</p></li>
+</ol>
+<p>The probability that the patient actually has the disease (given he has tested positive) is:</p>
+<div class="math notranslate nohighlight">
+\[ P(d\,|\,t) = \frac{P(t\,|\,d) \times P(d)}{P(t)} \]</div>
+<div class="math notranslate nohighlight">
+\[ P(d\,|\,t) = \frac{P(t\,|\,d) \times P(d)}{P(t)} \]</div>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(t\,|\,d) = 0.99\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(d) = 0.001\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(t)\)</span> overall probability of test returning a positive value is <span class="math notranslate nohighlight">\(P(t) = P(t\,|\,d)\,P(d) + P(t\,|\,\neg d)\,P(\neg d) = 0.05\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(t\,|\,\neg d) = 0.05\)</span></p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ P(d\,|\,t) = \frac{0.99 \cdot 0.001}{0.99 \cdot 0.001 + 0.05 \cdot (1-0.001)} = 0.019 \]</div>
+</div>
+<div class="section" id="different-better-setting">
+<h3>Different (Better) Setting?<a class="headerlink" href="#different-better-setting" title="Permalink to this headline">¶</a></h3>
+<p>But the patient went to see a doctor, the prior of 1 out of 1,000 is not a reality. Doctor’s data show that 1 patient has the disease out of 100 of those who enter the office.</p>
+<div class="math notranslate nohighlight">
+\[ P(d\,|\,t) = \frac{0.99 \times 0.01}{0.05} = 0.198 \]</div>
+</div>
+<div class="section" id="bayesian-inference">
+<h3>Bayesian Inference<a class="headerlink" href="#bayesian-inference" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># prior, likelihood, posterior</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;windows blue&quot;</span><span class="p">,</span> <span class="s2">&quot;amber&quot;</span><span class="p">,</span> <span class="s2">&quot;greyish&quot;</span><span class="p">,</span> <span class="s2">&quot;faded green&quot;</span><span class="p">,</span> <span class="s2">&quot;dusty purple&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">,</span> <span class="s2">&quot;brown&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;light blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_palette</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">z</span><span class="o">/</span><span class="n">N</span>
+<span class="n">rv</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="n">rv</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span>
+<span class="n">prior</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">post</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="n">z</span><span class="o">+</span><span class="n">a</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="n">z</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="n">ci</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+
+<span class="n">thetas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">prior</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">thetas</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Prior&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">prior</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">thetas</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$P(\theta) = beta(\theta\ |\ a, b)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Prior&#39;</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">N</span><span class="o">*</span><span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">thetas</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Likelihood&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">N</span><span class="o">*</span><span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">thetas</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$P(z,N\ |\ \theta)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Likelihood&#39;</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">prior</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">thetas</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Prior&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">dashes</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">N</span><span class="o">*</span><span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">thetas</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Likelihood&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">dashes</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">thetas</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Posterior&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">thetas</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="c1"># plt.axvline((z+a-1)/(N+a+b-2), c=colors[2], linestyle=&#39;dashed&#39;, alpha=0.8, label=&#39;MAP&#39;, lw=3)</span>
+<span class="c1"># plt.axvline(mu/N, c=colors[0], linestyle=&#39;dashed&#39;, alpha=0.8, label=&#39;MLE&#39;, lw=3)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">11</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">ci</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">ci</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ci</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;95% HDI&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">ci</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mf">0.5</span><span class="o">/</span><span class="mf">11.5</span><span class="p">,</span> <span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">ci</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">/</span><span class="mf">11.5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">ci</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">0.5</span><span class="o">/</span><span class="mf">11.5</span><span class="p">,</span> <span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">ci</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">/</span><span class="mf">11.5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$P(\theta\ |\ z,N) = beta(\theta\ |\ a+z, b+N-z)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Posterior&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_50_0.png" src="../_images/imlp_3_experiments_50_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="bayes-rule">
+<h3>Bayes Rule<a class="headerlink" href="#bayes-rule" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[ P(\theta\,|\,D) = \frac{P(D\,|\,\theta)\times P(\theta)}{P(D)} \]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is our estimation (eg. CTR), <span class="math notranslate nohighlight">\(D\)</span> data we measured (<span class="math notranslate nohighlight">\(z\)</span> heads from <span class="math notranslate nohighlight">\(N\)</span> tosses).</p>
+<div class="math notranslate nohighlight">
+\[ \text{Posterior} = \frac{\text{Likelihood} \times \text{Prior}}{\text{Total Evidence}} \]</div>
+</div>
+<div class="section" id="impact-of-prior-to-posterior">
+<h3>Impact of Prior to Posterior<a class="headerlink" href="#impact-of-prior-to-posterior" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># prior to posterior</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">z</span><span class="o">/</span><span class="n">N</span>
+<span class="n">rv</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+<span class="n">thetas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axx</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">));</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Updating a Beta Prior Distribution&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.92</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;windows blue&quot;</span><span class="p">,</span> <span class="s2">&quot;amber&quot;</span><span class="p">,</span> <span class="s2">&quot;greyish&quot;</span><span class="p">,</span> <span class="s2">&quot;faded green&quot;</span><span class="p">,</span> <span class="s2">&quot;dusty purple&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">,</span> <span class="s2">&quot;brown&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;light blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_palette</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">plot_column</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">thetas</span><span class="p">,</span> <span class="n">axx</span><span class="p">,</span> <span class="n">y_lim_top</span><span class="o">=</span><span class="mi">13</span><span class="p">):</span>
+    <span class="n">prior</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">post</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="n">z</span><span class="o">+</span><span class="n">a</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="n">z</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+    <span class="n">ci</span> <span class="o">=</span> <span class="n">post</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">prior</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">thetas</span><span class="p">),</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$beta(</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">)$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Prior $beta(</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">)$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">));</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">bottom</span><span class="o">=-</span><span class="mf">0.3</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">y_lim_top</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="n">y_lim_top</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">prior</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">thetas</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">pmf</span> <span class="o">=</span> <span class="n">N</span><span class="o">*</span><span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">thetas</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">pmf</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Likelihood&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$P(n,z\ |\ \theta)$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Likelihood $binomial(</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">, \theta)$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">N</span><span class="p">));</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">bottom</span><span class="o">=-</span><span class="mf">0.3</span><span class="p">);</span>
+    <span class="k">if</span> <span class="n">y_lim_top</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="n">y_lim_top</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pmf</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">thetas</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Posterior&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">post</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">thetas</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ci</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ci</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;95% CI&#39;</span><span class="p">);</span>
+<span class="c1">#     ax.text(ci[0]-0.1, .5, &#39;%0.3f&#39; % ci[0], fontsize=12);</span>
+<span class="c1">#     ax.text(ci[1], .5, &#39;%0.3f&#39; % ci[1], fontsize=12);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">ci</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">.3</span><span class="p">,</span> <span class="s1">&#39;95</span><span class="si">%%</span><span class="s1"> HDI&#39;</span> <span class="o">%</span> <span class="n">ci</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$beta(</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">)$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">z</span><span class="o">+</span><span class="n">a</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="n">z</span><span class="o">+</span><span class="n">b</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Posterior $beta(</span><span class="si">%d</span><span class="s1"> + </span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1"> + </span><span class="si">%d</span><span class="s1">)$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">N</span><span class="o">-</span><span class="n">z</span><span class="p">,</span> <span class="n">b</span><span class="p">));</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">bottom</span><span class="o">=-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>    
+    <span class="k">if</span> <span class="n">y_lim_top</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="n">y_lim_top</span><span class="p">);</span>
+
+<span class="n">plot_column</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">thetas</span><span class="p">,</span> <span class="n">axx</span><span class="p">[:][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">plot_column</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">thetas</span><span class="p">,</span> <span class="n">axx</span><span class="p">[:][</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plot_column</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">thetas</span><span class="p">,</span> <span class="n">axx</span><span class="p">[:][</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_54_0.png" src="../_images/imlp_3_experiments_54_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="bayes-rule-for-conversions">
+<h3>Bayes Rule for Conversions<a class="headerlink" href="#bayes-rule-for-conversions" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Estimate conversion rate <span class="math notranslate nohighlight">\(\theta\)</span> from <span class="math notranslate nohighlight">\(N\)</span> impressions of an online ad that recorded <span class="math notranslate nohighlight">\(z\)</span> clicks.</p></li>
+<li><p>Or estimate the bias <span class="math notranslate nohighlight">\(\theta\)</span> of a coin given a sample consisting of <span class="math notranslate nohighlight">\(N\)</span> tosses with <span class="math notranslate nohighlight">\(z\)</span> heads.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[P(\theta\,|\,z, N) = \frac{P(z, N\,|\,\theta)\ \text{beta}(a, b)}{P(z, N)} = \text{beta}(a+z, b+N-z)\]</div>
+<p>Where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(z, N\,|\,\theta) = P(z, N\,|\,\theta) = \binom{N}{z}\theta^z(1-\theta)^{N-z}\)</span> is binomial likelihood function of getting test results for different <span class="math notranslate nohighlight">\(\theta\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(\theta) = beta(\theta\,|\,a, b)\)</span> is our prior belief about where <span class="math notranslate nohighlight">\(\theta\)</span> is before running experiment.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(\theta\,|\,z,N)\)</span> is posterior distribution aka our prior believe updated by the evidence from the experiment results of <span class="math notranslate nohighlight">\(z/N\)</span> of where we can expect <span class="math notranslate nohighlight">\(\theta\)</span> to lie.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(\theta\,|\,z,N) = \text{beta}(\theta\,|\,a + z, b + N - z)\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[P(\theta\,|\,z, N) = \text{beta}(a+z, b+N-z)\]</div>
+<p>Where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\text{beta}\)</span> is beta distribution</p></li>
+<li><p><span class="math notranslate nohighlight">\(a\)</span> is prior number of successes</p></li>
+<li><p><span class="math notranslate nohighlight">\(b\)</span> is prior number of failures</p></li>
+<li><p><span class="math notranslate nohighlight">\(N\)</span> number of observations in the test</p></li>
+<li><p><span class="math notranslate nohighlight">\(z\)</span> number of successes (conversions) in the test</p></li>
+</ul>
+</div>
+<div class="section" id="beta-distribution">
+<h3>Beta Distribution<a class="headerlink" href="#beta-distribution" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># beta distributions</span>
+<span class="n">plots</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">thetas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axx</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="n">plots</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="n">plots</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">));</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;windows blue&quot;</span><span class="p">,</span> <span class="s2">&quot;amber&quot;</span><span class="p">,</span> <span class="s2">&quot;greyish&quot;</span><span class="p">,</span> <span class="s2">&quot;faded green&quot;</span><span class="p">,</span> <span class="s2">&quot;dusty purple&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">,</span> <span class="s2">&quot;brown&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;light blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_palette</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">plots</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">plots</span><span class="p">):</span>
+        <span class="n">aa</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+        <span class="n">bb</span> <span class="o">=</span> <span class="n">b</span><span class="o">+</span><span class="mi">1</span>
+        <span class="n">beta</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">)</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="n">b</span><span class="p">]</span>
+        <span class="n">pst</span> <span class="o">=</span> <span class="n">beta</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">thetas</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="n">pst</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">thetas</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pst</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
+<span class="c1">#         ax.set_ylabel(r&#39;$p(\theta|a=%d, b=%d)$&#39; % (aa, bb), fontsize=14);</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$beta(</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">)$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="n">bb</span><span class="p">));</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_59_0.png" src="../_images/imlp_3_experiments_59_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="is-bayesian-analysis-more-informative">
+<h3>Is Bayesian Analysis More Informative?<a class="headerlink" href="#is-bayesian-analysis-more-informative" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>NHST does not work with priors while BA makes them explicit and part of the reasoning process.</p></li>
+<li><p>NHST uses sampling distribution for inference while BA uses posterior distribution.</p>
+<ul class="simple">
+<li><p>Sampling distribution tells us probabilities of possible data given a particular (null) hypothesis.</p></li>
+<li><p>Posterior distribution tells us credibilities of possible hypothesis (values of <span class="math notranslate nohighlight">\(\theta\)</span>) given the data.</p></li>
+</ul>
+</li>
+</ol>
+<p>Good discussion of these properties from frequentists point of view could be found in:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="http://blog.analytics-toolkit.com/2018/google-optimize-statistical-significance-statistical-engine/">G. Georgiev, The Google Optimize Statistical Engine and Approach</a></p></li>
+<li><p><a class="reference external" href="http://blog.analytics-toolkit.com/2017/5-reasons-bayesian-ab-testing-debunked/">G. Georgiev, 5 Reasons to Go Bayesian in AB Testing – Debunked</a></p></li>
+</ol>
+<p><a id='decision'></a></p>
+</div>
+</div>
+<div class="section" id="decision-rules">
+<h2>Decision Rules<a class="headerlink" href="#decision-rules" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>NHST - Reject null hypothesis if p-value <span class="math notranslate nohighlight">\(\lt 5\%\)</span>.</p></li>
+<li><p>Bayes</p>
+<ul class="simple">
+<li><p>Reject null hypothesis if 95% HDI is outside of <em>Region of Practical Equivalence (ROPE)</em> defined around null value.</p></li>
+<li><p>Accept null hypothesis if 95% HDI is completely inside of Region of Practical Equivalence.</p></li>
+</ul>
+</li>
+</ol>
+<div class="section" id="decision-rules-and-false-positives">
+<h3>Decision Rules and False Positives<a class="headerlink" href="#decision-rules-and-false-positives" title="Permalink to this headline">¶</a></h3>
+<p>NHST has 100% false positive rate when doing sequentional testing stopped when p-value is below 5% with enough patience. Reasons:</p>
+<ol class="simple">
+<li><p>NHST only rejects null hypothesis (cannot accept one).</p></li>
+<li><p>There is non zero probability to get long stretch of extreme values that move p-value below 5%.</p></li>
+</ol>
+</div>
+<div class="section" id="simulation-of-decision-making">
+<h3>Simulation of Decision Making<a class="headerlink" href="#simulation-of-decision-making" title="Permalink to this headline">¶</a></h3>
+<p>There are simulated data of 2000 flips with p-value calculated after every flip below. The first set is for case when null hypothesis of <span class="math notranslate nohighlight">\(\theta = 0.5\)</span> is true. The second set is for case when null hypothesis is not true.</p>
+<p>Graph with <em><span class="math notranslate nohighlight">\(z/N\)</span></em> shows proportion of <span class="math notranslate nohighlight">\(z\)</span> in <span class="math notranslate nohighlight">\(N\)</span> flips after every flip. Graph with p-value shows p-value calculated for cumulated data after every flip.</p>
+<p>Graph with 95% HDI shows 95% HDI intervals after every flip as vertical line. Decision rule based on accepting null hypothesis when 95% HDI interval is completely within ROPE (dashed lines for <span class="math notranslate nohighlight">\(\theta = 0.45\)</span> and <span class="math notranslate nohighlight">\(\theta = 0.55\)</span>) is much stable than NHST decision rule although it has some false positives when not enough data are available.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># null hypothesis is true</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">bernoulli</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">))</span>
+<span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">zs</span><span class="p">)</span>
+<span class="c1"># np.save(&#39;zs_nh_true.npy&#39;, zs, allow_pickle=False, fix_imports=False)</span>
+<span class="n">zs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./imlp3_files/zs_nh_true.npy&#39;</span><span class="p">)</span>
+
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">p_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">zs</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">ns</span><span class="p">]</span>
+<span class="n">posts</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">zs</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ns</span> <span class="o">-</span> <span class="n">zs</span><span class="p">)</span>
+<span class="n">cs</span> <span class="o">=</span> <span class="n">posts</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">.95</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axx</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Sequentional Testing, Null Hypothesis is True - $\theta = 0.5$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;windows blue&quot;</span><span class="p">,</span> <span class="s2">&quot;amber&quot;</span><span class="p">,</span> <span class="s2">&quot;greyish&quot;</span><span class="p">,</span> <span class="s2">&quot;faded green&quot;</span><span class="p">,</span> <span class="s2">&quot;dusty purple&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">,</span> <span class="s2">&quot;brown&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;light blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_palette</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">zs</span><span class="o">/</span><span class="n">ns</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">7</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$z/N$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">))</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">p_values</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span> <span class="k">if</span> <span class="n">p_values</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.05</span> <span class="k">else</span> <span class="s1">&#39;k&#39;</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">)],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;p-value&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">bottom</span><span class="o">=-</span><span class="mf">0.05</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span> <span class="k">if</span> <span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">n</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">0.45</span> <span class="ow">and</span> <span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">n</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mf">0.55</span> <span class="k">else</span> <span class="s1">&#39;k&#39;</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">)],</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.55</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Accepting 95% HDI&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Flips&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_65_0.png" src="../_images/imlp_3_experiments_65_0.png" />
+</div>
+</div>
+<div class="section" id="null-hypothesis-is-true">
+<h4>Null Hypothesis is True<a class="headerlink" href="#null-hypothesis-is-true" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>p-value &lt; 5% based decision rule shows long stretches of p-value &lt; 5% when if we stopped the test there, it would falsly reject null hypothesis. This example shows that even around flip 2000 it would falsly reject true null hypothesis.</p></li>
+<li><p>95% HDI decision rule shows much stable behavior starting fairy stably accepting true null hypothesis around step 1300.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># null hypothesis is false</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">zs1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">bernoulli</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">))</span>
+<span class="n">zs1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">zs1</span><span class="p">)</span>
+<span class="c1"># np.save(&#39;zsa.npy&#39;, zs1, allow_pickle=False, fix_imports=False)</span>
+<span class="n">zs1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./imlp3_files/zs_null_false.npy&#39;</span><span class="p">)</span>
+
+<span class="n">theta</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">p_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">binom</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">zs1</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">ns</span><span class="p">]</span>
+<span class="n">posts</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">zs1</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ns</span> <span class="o">-</span> <span class="n">zs1</span><span class="p">)</span>
+<span class="n">cs</span> <span class="o">=</span> <span class="n">posts</span><span class="o">.</span><span class="n">interval</span><span class="p">(</span><span class="mf">.95</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axx</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Sequentional Testing, Null Hypothesis is False - $\theta = </span><span class="si">%0.2f</span><span class="s1">$&#39;</span> <span class="o">%</span> <span class="n">theta</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;windows blue&quot;</span><span class="p">,</span> <span class="s2">&quot;amber&quot;</span><span class="p">,</span> <span class="s2">&quot;greyish&quot;</span><span class="p">,</span> <span class="s2">&quot;faded green&quot;</span><span class="p">,</span> <span class="s2">&quot;dusty purple&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">,</span> <span class="s2">&quot;brown&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;light blue&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">xkcd_palette</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">zs1</span><span class="o">/</span><span class="n">ns</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">7</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$z/N$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">))</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">p_values</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span> <span class="k">if</span> <span class="n">p_values</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.05</span> <span class="k">else</span> <span class="s1">&#39;k&#39;</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">)],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;p-value&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">bottom</span><span class="o">=-</span><span class="mf">0.05</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axx</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span> <span class="k">if</span> <span class="n">cs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">n</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.55</span> <span class="k">else</span> <span class="s1">&#39;k&#39;</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">N</span><span class="p">)],</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.45</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.55</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Rejecting 95% HDI&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Flips&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_67_0.png" src="../_images/imlp_3_experiments_67_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="null-hypothesis-is-false">
+<h4>Null Hypothesis is False<a class="headerlink" href="#null-hypothesis-is-false" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>p-value &lt; 5% based decision rule starts correctly rejecting null hypothesis after step 1300. There’s also stretch around 1800 steps when it stops rejecting null hypothesis.</p></li>
+<li><p>95% HDI decision rule starts rejecting null hypothesis much sooner and shows stable behavior.</p></li>
+</ol>
+<p><a id="pbb"></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="probabilistic-results">
+<h2>Probabilistic Results<a class="headerlink" href="#probabilistic-results" title="Permalink to this headline">¶</a></h2>
+<p>We measure experiment results (conversion rates) and calculate their posterior distributions. We sample many (&gt;= 1,000,000) samples from these posterior distributions and calculate following properties of these samples per variant.</p>
+<ol class="simple">
+<li><p>Improvement</p></li>
+<li><p>Probability to Beat Baseline</p></li>
+<li><p>Probability to Be the Best</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">10000</span> <span class="c1"># samples per variant in experiment</span>
+<span class="n">S</span> <span class="o">=</span> <span class="mi">10000</span> <span class="c1"># number of samples taken from posterior distribution</span>
+
+<span class="n">theta_a</span> <span class="o">=</span> <span class="mf">0.1</span>  <span class="c1"># simulated conversion rates of three variants</span>
+<span class="n">theta_b</span> <span class="o">=</span> <span class="mf">0.11</span>
+<span class="n">theta_c</span> <span class="o">=</span> <span class="mf">0.12</span>
+
+<span class="n">ns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">zs_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">bernoulli</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">theta_a</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)))</span> <span class="c1"># cumulated number of conversion</span>
+<span class="n">zs_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">bernoulli</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">theta_b</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)))</span>
+<span class="n">zs_c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">bernoulli</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">theta_c</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)))</span>
+
+<span class="n">posts_a</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">zs_a</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ns</span> <span class="o">-</span> <span class="n">zs_a</span><span class="p">)</span> <span class="c1"># for each measurement, take its beta distribution, we have N betas per variant</span>
+<span class="n">posts_b</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">zs_b</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ns</span> <span class="o">-</span> <span class="n">zs_b</span><span class="p">)</span>
+<span class="n">posts_c</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">beta</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">zs_c</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ns</span> <span class="o">-</span> <span class="n">zs_c</span><span class="p">)</span>
+
+<span class="n">posts_a_rvs</span> <span class="o">=</span> <span class="n">posts_a</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span> <span class="c1"># sample S samples from each of N betas</span>
+<span class="n">posts_b_rvs</span> <span class="o">=</span> <span class="n">posts_b</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+<span class="n">posts_c_rvs</span> <span class="o">=</span> <span class="n">posts_c</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
+
+<span class="n">improvement</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(((</span><span class="n">posts_c_rvs</span> <span class="o">-</span> <span class="n">posts_a_rvs</span><span class="p">)</span> <span class="o">/</span> <span class="n">posts_a_rvs</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">beat_baseline</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">posts_c_rvs</span> <span class="o">&gt;</span> <span class="n">posts_a_rvs</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">S</span>
+
+<span class="n">pbb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">posts_a_rvs</span><span class="p">,</span> <span class="n">posts_b_rvs</span><span class="p">,</span> <span class="n">posts_c_rvs</span><span class="p">)),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># who won in 3x S samples in every N samples</span>
+<span class="n">pbb_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pbb</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">S</span>
+<span class="n">pbb_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pbb</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">S</span>
+<span class="n">pbb_c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">pbb</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">/</span> <span class="n">S</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="improvement">
+<h3>Improvement<a class="headerlink" href="#improvement" title="Permalink to this headline">¶</a></h3>
+<p>Median improvement that we can expect over the baseline if we full scale the variant.</p>
+<div class="math notranslate nohighlight">
+\[ \text{Improvement of C over A} = \text{median}\left(\frac{\text{Sample C} - \text{Sample A}}{\text{Sample A}}\right) \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># improvement of C against A</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">[</span><span class="n">f</span><span class="p">:],</span> <span class="n">improvement</span><span class="p">[</span><span class="n">f</span><span class="p">:],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Improvement of C against A&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Samples in Experiment&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Improvement&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_74_0.png" src="../_images/imlp_3_experiments_74_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="probability-to-beat-baseline">
+<h3>Probability to Beat Baseline<a class="headerlink" href="#probability-to-beat-baseline" title="Permalink to this headline">¶</a></h3>
+<p>Number of times treatment variant sample beats control (baseline) variant sample.</p>
+<div class="math notranslate nohighlight">
+\[ \text{Probability of variant C beating A} = \frac{\text{Number of times variant C sample is greater than variant A sample}}{\text{Total number of samples}} \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># probability of C beating baseline A</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">,</span> <span class="n">beat_baseline</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Probability of C Beating Baseline A&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Samples in Experiment&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability of Beating Baseline&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_77_0.png" src="../_images/imlp_3_experiments_77_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="probability-to-be-the-best">
+<h3>Probability to Be the Best<a class="headerlink" href="#probability-to-be-the-best" title="Permalink to this headline">¶</a></h3>
+<p>Number of times variant sample beats all other variants samples.</p>
+<div class="math notranslate nohighlight">
+\[ \text{Probability of variant C being the best} = \frac{\text{Number of times variant C sample is greater than other variant samples}}{\text{Total number of samples}} \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># probability of being best</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">));</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">[</span><span class="n">f</span><span class="p">:],</span> <span class="n">pbb_a</span><span class="p">[</span><span class="n">f</span><span class="p">:],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">[</span><span class="n">f</span><span class="p">:],</span> <span class="n">pbb_b</span><span class="p">[</span><span class="n">f</span><span class="p">:],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ns</span><span class="p">[</span><span class="n">f</span><span class="p">:],</span> <span class="n">pbb_c</span><span class="p">[</span><span class="n">f</span><span class="p">:],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Probability of Being Best&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Samples in Experiment&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability of Being Best&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/imlp_3_experiments_80_0.png" src="../_images/imlp_3_experiments_80_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ab-test-dashboard">
+<h3>AB Test Dashboard<a class="headerlink" href="#ab-test-dashboard" title="Permalink to this headline">¶</a></h3>
+<p><img alt="dashboard" src="../_images/dashboard.png" /></p>
+<p><a id='resources'></a></p>
+</div>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><strong>Prem S. Mann</strong> Introductory Statistics 7nd Edition</p></li>
+<li><p><strong>R. Kohavi, A. Deng</strong> <a class="reference external" href="https://exp-platform.com/Documents/2014%20experimentersRulesOfThumb.pdf">Seven Rules of Thumb for Website Experimenters</a></p></li>
+<li><p><strong>John Kruschke</strong> <a class="reference external" href="https://www.amazon.com/dp/0124058884">Doing Bayesian Data Analysis</a></p></li>
+<li><p><strong>S. Gupta, R. Kohavi et al.</strong> <a class="reference external" href="https://exp-platform.com/Documents/2019-FirstPracticalOnlineControlledExperimentsSummit_SIGKDDExplorations.pdf">Top Challenges from the first Practical Online Controlled Experiments Summit</a></p></li>
+<li><p><strong>H. Hohnhold, D. O’Brien, D. Tang</strong> <a class="reference external" href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43887.pdf">Focusing on the Long-term: It’s Good for Users and Business</a></p></li>
+<li><p><a class="reference external" href="https://exp-platform.com/">ExP Experimentation Platform</a></p></li>
+<li><p><a class="reference external" href="https://people.duke.edu/~ccc14/sta-663/MCMC.html">Computational Statistics in Python</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "mlp"
+        },
+        kernelOptions: {
+            kernelName: "mlp",
+            path: "./imlp"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'mlp'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="imlp_2_modeling.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Modeling and Evaluation</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="imlp_4_deep_learning.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Deep Learning</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Ondra Zahradnik, Martin Neznal & Data Science Team at Avast<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
