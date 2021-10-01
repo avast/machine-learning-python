@@ -1,0 +1,19 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Machine Learning in Python
+    numbered: False
+    chapters:
+      - file: imlp/imlp_1_data
+      - file: imlp/imlp_2_modeling
+      - file: imlp/imlp_3_experiments
+      - file: imlp/imlp_4_deep_learning
+  # - caption: Time-series
+  #   chapters:
+  #     - file: timeseries/anomaly_detection
+  - caption: Setup
+    chapters:
+      - file: setup
