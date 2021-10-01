@@ -6,14 +6,14 @@
 #######################################################################################
 # Book settings
 title                       : Machine Learning in Python  # The title of the book. Will be placed in the left navbar.
-author                      : Ondra Zahradnik & Data Science Team at Avast  # The author of the book
+author                      : Ondra Zahradnik, Martin Neznal & Data Science Team at Avast  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
-logo                        : logo.png  # A path to the book logo
+logo                        : logo.svg  # A path to the book logo
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: auto
+  execute_notebooks: off
   # exclude_patterns:
     # - 'book'
 
@@ -28,7 +28,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/ondraz/machine-learning-python  # Online location of your book
+  url: https://github.com/avast/machine-learning-python  # Online location of your book
   path_to_book: book  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
