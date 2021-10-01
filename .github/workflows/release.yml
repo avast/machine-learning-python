@@ -52,7 +52,7 @@ jobs:
 
       - name: pre-publish documentation
         run: |
-          poetry install -E doc
+          poetry install
           poetry run mkdocs build
 
       - name: publish documentation
@@ -80,9 +80,9 @@ jobs:
           draft: false
           prerelease: false
 
-      - name:
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          skip_existing: true
+      # - name:
+      #   uses: pypa/gh-action-pypi-publish@release/v1
+      #   with:
+      #     user: __token__
+      #     password: ${{ secrets.PYPI_API_TOKEN }}
+      #     skip_existing: true
