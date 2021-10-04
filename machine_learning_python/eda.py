@@ -2,27 +2,27 @@ import pandas as pd
 import scipy.stats as st
 
 
-def eda_categorical(df, target, group_by_cols="", max_categorical_values=10, sample=1000):
+def eda_categorical(df, target, group_by_cols="", max_categorical_values=10, sample=1000, confidence_level=0.95):
     """
-    Aggregate data frame by categorical columns with statistical properties to do quick
-    EDA plotting.
+    Discover categorical columns and calculate target value statistic per value in each categorical column.
 
-    Samples from data frame, calculates number of unique values per column, aggregates
-    to get count, mean, standard error, standard deviation, and sum metrics of target
-    column for any combination of categorical values.
+    This is helpful to get values for statistical charts ala Seaborn barplot.
+
+    First, samples from the data frame, calculates number of unique values per column, aggregates target values
+    per categorical column and value to get count, mean, standard error, standard deviation,
+    sum, and 95% confidence interval.
 
     Arguments:
         df: data frame to aggregate
         target: column name of the target column, statistics get computed for this column
-        group_by_cols: optional list of columns to group by, uses all categorical columns
-            if empty
         max_categorical_values: if a column has less or equal unique values, it is treated
             as categorical column. Set 0 if for no limit.
-        sample: sample size. Set 0 to use whole data frame.
+        sample: sample size. Set to 0 to use whole data frame.
+        confidence_level: confidence level a.k.a 1 - alpha (i.e set it to 0.95 for 95% confidence interval)
 
     Returns:
             data frame with `count`, `mean`, `sem`, `std`, `sum` columns for every
-            combination of categorical values.
+            values in every categorical column.
 
     Usage:
 
@@ -49,7 +49,7 @@ def eda_categorical(df, target, group_by_cols="", max_categorical_values=10, sam
             std=(target, "std"),
             sum=(target, "sum"),
         )
-        d["ci"] = d["sem"] * st.t.ppf(0.975, d.cnt - 1)
+        d["ci"] = d["sem"] * st.t.ppf(1 - (1-confidence_level)/2, d.cnt - 1)
         d["variable"] = c
         r = pd.concat([r, d], axis=0)
 
@@ -59,23 +59,21 @@ def eda_categorical(df, target, group_by_cols="", max_categorical_values=10, sam
     return r
 
 
-def eda_grouped(df, target, group_by_cols="", sample=1000):
+def eda_grouped(df, target, group_by_cols="", sample=1000, confidence_level=0.95):
     """
-    Aggregate data frame by categorical columns with statistical properties to do quick
-    EDA plotting.
+    Group the data frame and aggregate the data to calculate statistical properties to do quick
+    plotting.
 
-    Samples from data frame, calculates number of unique values per column, aggregates
-    to get count, mean, standard error, standard deviation, and sum metrics of target
-    column for any combination of categorical values.
+    First, samples from the data frame, groups by columns, aggregates target values to get
+    count, mean, standard error, standard deviation, sum, and 95% confidence interval.
 
     Arguments:
         df: data frame to aggregate
         target: column name of the target column, statistics get computed for this column
         group_by_cols: optional list of columns to group by, uses all categorical columns
             if empty
-        max_categorical_values: if a column has less or equal unique values, it is treated
-            as categorical column. Set 0 if for no limit.
         sample: sample size. Set 0 to use whole data frame.
+        confidence_level: confidence level a.k.a 1 - alpha (i.e set it to 0.95 for 95% confidence interval)
 
     Returns:
             data frame with `count`, `mean`, `sem`, `std`, `sum` columns for every
@@ -88,7 +86,7 @@ def eda_grouped(df, target, group_by_cols="", sample=1000):
     import machine_learning_python as mlp
 
     df = pd.DataFrame({"category_1": ['yes', 'no', 'yes'], "category_2": [1., 1., 0.], "label": [1, 0, 1]})
-    eda_categorical(df, "label")
+    eda_grouped(df, "label")
     ```
     """
     cols = list(df.columns)
@@ -100,6 +98,6 @@ def eda_grouped(df, target, group_by_cols="", sample=1000):
         std=(target, "std"),
         sum=(target, "sum"),
     )
-    d["ci"] = d["sem"] * st.t.ppf(0.975, d.cnt - 1)
+    d["ci"] = d["sem"] * st.t.ppf(1 - (1-confidence_level)/2, d.cnt - 1)
     d.reset_index(inplace=True)
     return d

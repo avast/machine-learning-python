@@ -24,12 +24,13 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        pip install poetry
+        poetry install
 
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build book
+        poetry run jupyter-book build book
 
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
