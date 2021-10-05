@@ -49,7 +49,7 @@ def eda_categorical(df, target, group_by_cols="", max_categorical_values=10, sam
             std=(target, "std"),
             sum=(target, "sum"),
         )
-        d["ci"] = d["sem"] * st.t.ppf(1 - (1-confidence_level)/2, d.cnt - 1)
+        d["ci"] = d["sem"] * st.t.ppf(1 - (1 - confidence_level) / 2, d.cnt - 1)
         d["variable"] = c
         r = pd.concat([r, d], axis=0)
 
@@ -89,8 +89,6 @@ def eda_grouped(df, target, group_by_cols="", sample=1000, confidence_level=0.95
     eda_grouped(df, "label")
     ```
     """
-    cols = list(df.columns)
-    sdf = df if df.shape[0] <= sample or sample == 0 else df.sample(sample)
     d = df.groupby(group_by_cols)[[target]].agg(
         cnt=(target, "count"),
         mean=(target, "mean"),
@@ -98,6 +96,6 @@ def eda_grouped(df, target, group_by_cols="", sample=1000, confidence_level=0.95
         std=(target, "std"),
         sum=(target, "sum"),
     )
-    d["ci"] = d["sem"] * st.t.ppf(1 - (1-confidence_level)/2, d.cnt - 1)
+    d["ci"] = d["sem"] * st.t.ppf(1 - (1 - confidence_level) / 2, d.cnt - 1)
     d.reset_index(inplace=True)
     return d

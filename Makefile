@@ -1,9 +1,13 @@
 # created with `cookiecutter https://github.com/zillionare/cookiecutter-pypackage`
 
 install:
+	poetry update
 	poetry install
-	source .venv/bin/activate && pip install kaleido
-	source .venv/bin/activate && ipython kernel install --user --name=machine-learning-python
+
+dev-install: install
+	poetry install -E development
+	poetry run ipython kernel install --user --name=machine-learning-python
+	poetry run pre-commit install
 
 clean:
 	rm -rf build .eggs book/_build dist .tox machine_learning_python/__pycache__
