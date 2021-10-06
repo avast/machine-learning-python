@@ -1,11 +1,13 @@
 # created with `cookiecutter https://github.com/zillionare/cookiecutter-pypackage`
 
 install:
-	python -m pip install virtualenv
-	python -m virtualenv venv
-	source venv/bin/activate && python -m pip install poetry
-	source venv/bin/activate && poetry install
-	source venv/bin/activate && ipython kernel install --user --name=machine-learning-python
+	poetry update
+	poetry install
+
+dev-install: install
+	poetry install -E development
+	poetry run ipython kernel install --user --name=machine-learning-python
+	poetry run pre-commit install
 
 clean:
 	rm -rf build .eggs book/_build dist .tox machine_learning_python/__pycache__
@@ -13,4 +15,4 @@ clean:
 
 # regenerate the book every time there is a change in source files
 develop:
-	source venv/bin/activate && find book -path book/_build -prune -false -o \( -name '*.ipynb' -o -name '*.md' -o -name '*.yml' \) | entr jupyter-book build book
+	source .venv/bin/activate && find book -path book/_build -prune -false -o \( -name '*.ipynb' -o -name '*.md' -o -name '*.yml' \) | entr jupyter-book build book
