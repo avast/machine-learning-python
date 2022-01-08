@@ -115,3 +115,4 @@ __pycache__
 .eggs
 .tox
 .ipynb_checkpoints/
+*.slides.html
