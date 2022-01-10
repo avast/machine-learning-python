@@ -4,10 +4,14 @@ There are many online courses explaining different pieces of ML. Very few of the
 
 ## Prepare Working Environment
 
-1. Run `make install` - sets up virtual environment in `.venv` directory and setups dependencies using [Poetry]() config file [pyproject.toml].
+1. Run `make install` - sets up virtual environment in `.venv` directory and setups dependencies using [Poetry]() config file [pyproject.toml](./pyproject.toml).
 2. Run `jupyter lab`
 3. Open default [lab url](http://localhost:8888/lab)
 4. Open notebook
+
+### Additional Dependencies
+
+1. Install [Graphviz](https://graphviz.org/) to be able to create images of decision trees.
 
 ## Editing Jupyter Book Export
 
