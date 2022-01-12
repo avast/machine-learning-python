@@ -48,6 +48,8 @@ seaborn = "^0.11.2"
 pydotplus = "^2.0.2"
 graphviz = "^0.19.1"
 xgboost = "^1.5.1"
+shap = "^0.40.0"
+lime = "^0.2.0"
 
 [tool.poetry.extras]
 development = [
